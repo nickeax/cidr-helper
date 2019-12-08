@@ -8,7 +8,6 @@ const outbincidr = document.querySelector("#outbincidr");
 const mask = document.querySelector("#mask");
 mask.addEventListener("keyup", processMask);
 mask.disabled = true;
-const output = document.querySelector("#output");
 const inputs = document.querySelectorAll("input");
 const defaultMessage = "Nothing to display";
 const emptyMsg = ". . .";
