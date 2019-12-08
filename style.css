@@ -1,0 +1,224 @@
+/* basic styles */
+body, input, textarea, select, option, button, label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  background-color: rgb(248, 245, 199);
+}
+
+p {
+  max-width: 40em;
+  margin: 1em auto;
+}
+
+fieldset {
+  max-width: 40em;
+  padding: 4px;
+  margin: 2em auto;
+  border: 0 none;
+}
+
+legend {
+  font-size: 1.2em;
+  width: 100%;
+  border-bottom: 1px dotted #99c;
+}
+
+input, output, textarea, select, button {
+  box-sizing: border-box;
+  padding: 0.2em 0.4em;
+  margin: 0.2em 0;
+  outline: 0 none;
+  border: 0 none;
+  box-shadow: none;
+}
+
+button {
+  max-width: 9em;
+  padding: 0.2em 2em;
+  background-color: #ddd;
+  box-shadow: 0 2px 0 #bbb;
+  cursor: pointer;
+}
+
+label {
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+}
+
+input:focus + label, textarea:focus + label, select:focus + label {
+  color: #933;
+}
+
+input:checked + label {
+  font-weight: bold;
+}
+
+/* fallback 30%/70% float layout */
+input, output, textarea, select, button {
+  clear: both;
+  float: right;
+  width: 70%;
+}
+
+label {
+  float: left;
+  width: 30%;
+  text-align: right;
+  padding: 0.25em 1em 0 0;
+}
+
+button, input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  float: left;
+  margin: 0.5em 0.5em 0 30%;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+  width: auto;
+  text-align: left;
+}
+
+.messages {
+  display: inline-block;
+  width: 100%;
+  padding: 6px;
+  margin: 3px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Output */
+.information {
+  color: rgb(37, 94, 37);;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+
+.network, .subnet, .decNetwork {
+  font-size: 1.2rem;
+}
+
+.network::after, .subnet::after, .decNetwork::after {
+  top: -18px;
+  left: 0;
+}
+
+.network {
+  position: relative;
+  color: yellowgreen;
+  font-family: monospace;
+  font-weight: 100;
+}
+.network::after {
+  position: absolute;
+  content: 'hosts';
+  
+}
+
+.subnet {
+  position: relative;
+  color: aliceblue;
+  font-family: monospace;
+  font-weight: 300;
+}
+
+.subnet::after {
+  position: absolute;
+  content: 'net';
+  
+}
+
+.decNetwork {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  color: rgb(205, 125, 50);
+  font-family: monospace;
+  font-weight: 100;
+}
+.decNetwork::after {
+  position: absolute;
+  content: 'subnet host machine';
+  
+}
+
+.clrbtn {
+  width: 6rem;
+  text-align: center;
+  color: red;
+  border: 2px solid red;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 7px;
+  transition: all 60ms ease-in-out;
+}
+
+.clrbtn:hover {
+  cursor: pointer;
+  color: rgb(248, 245, 199);
+  background-color: red;
+}
+
+.clrbtn:active {
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+.maskedDecimal, .maskedBinary{
+  color: rgb(248, 245, 199);
+  background-color: rgb(10, 27, 10);
+  padding: 2rem 5px;
+  margin: 10px 0;
+}
+
+.maskedDecimal {
+  margin-top: 1rem;
+}
+
+.maskedBinary {
+  margin-bottom: 5rem;
+}
+
+/* grid layout */
+@supports (display: grid) {
+ 
+  .formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1em 2fr;
+    grid-gap: 0.3em 0.6em;
+    grid-auto-flow: dense;
+    align-items: center;
+  }
+  
+  input, output, textarea, select, button {
+    grid-column: 2 / 4;
+    width: auto;
+    margin: 0;
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    grid-column: 1 / 3;
+    justify-self: end;
+    margin: 0;
+  }
+  
+  label, input[type="checkbox"] + label, input[type="radio"] + label {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  
+  textarea + label {
+    align-self: start;
+  }
+  
+}

@@ -1,0 +1,33 @@
+<div id="app">
+	<h2>cidr hlpr </h2>
+	<form id="myform" action="get">
+		<fieldset>
+			<legend>[input]</legend>
+
+			<div class="formgrid">
+
+				<input id="deccidr" name="deccidr" type="text" />
+				<label for="deccidr">dec cidr</label>
+
+				<input id="mask" name="mask" type="text" />
+				<label for="mask">mask bits count /</label>
+
+				<input id="bincidr" name="bincidr" type="text" disabled/>
+				<label for="bincidr">bin cidr</label>
+
+			</div>
+      <legend>[output]</legend>
+			<div class="maskedDecimal" id="outbincidr"><tt>Binary IP output (empty)</tt></div>
+			<div class="maskedBinary"  id="outdeccidr"><tt>Decimal hosts IP (empty)</tt></div>
+
+			<div id="clear" class="clrbtn">CLEAR</div>
+
+
+
+		</fieldset>
+	</form>
+	<div>
+		<p id="output"></p>
+	</div>
+</div>
+</div>
