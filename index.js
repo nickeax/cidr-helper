@@ -11,7 +11,7 @@ mask.disabled = true;
 const inputs = document.querySelectorAll("input");
 const defaultMessage = "Nothing to display";
 const emptyMsg = ". . .";
-const clear = document.querySelector("#clear").addEventListener("click", clear);
+const clear = document.querySelector("#clear").addEventListener("click", clearIt);
 const btns = document.querySelectorAll(".btns");
 const binPlaceArr = [
   1,
@@ -200,7 +200,7 @@ function isInRange(n, l, u) {
   return n >= l && n <= u ? true : false;
 }
 
-function clear() {
+function clearIt() {
   if (deccidr) deccidr.value = "";
   if (bincidr) bincidr.value = "";
   if (outdeccidr) outdeccidr.innerHTML = emptyMsg;
