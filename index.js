@@ -1,5 +1,4 @@
 // Import stylesheets
-import "./style.css";
 const output = document.querySelector("#output");
 const deccidr = document.querySelector("#deccidr");
 deccidr.addEventListener("keyup", processInput);
