@@ -6,7 +6,7 @@ body, input, textarea, select, option, button, label {
 
 body {
   color: #333;
-  background-color: rgb(248, 245, 199);
+  background-color: rgb(255, 255, 255);
 }
 
 p {
@@ -28,12 +28,19 @@ legend {
 }
 
 input, output, textarea, select, button {
+  background-color: #333;
+  color: rgb(0, 255, 60);
   box-sizing: border-box;
   padding: 0.2em 0.4em;
   margin: 0.2em 0;
   outline: 0 none;
   border: 0 none;
   box-shadow: none;
+}
+
+#bincidr {
+  font-weight: bold;
+  color: orangered;
 }
 
 button {
