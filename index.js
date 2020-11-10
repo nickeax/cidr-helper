@@ -140,7 +140,7 @@ function padOutput(str) {
 
 function append(str, ch, amount) {
   for (let i = 0; i < amount; i++) {
-    str += ch;
+    str = `0${str}`;
   }
   return str;
 }
